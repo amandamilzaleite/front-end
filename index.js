@@ -7,7 +7,7 @@ function autenticar(){
 
     // definir alguns passos
     var func=0;
-    if(Number.isInteger(txtEmail)){
+    if(! isNaN(txtEmail)){
         func = parseInt(txtEmail);
     }
     // essa é a mensagem do corpo
