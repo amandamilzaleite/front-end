@@ -123,12 +123,19 @@ function gerarRelatorio(){
 
 
 function trataResultado(res){
-    var rel = "";
+    var rel = "<br><table border=2 width='100%'>";
+    rel += "<tr><th>Agencia</th><th>Nome</th><th>Email</th><th>Telefone</th><th>Data</th><th>Hora</th><th>Observacao</th></tr>"
     for(i=0; i<res.length; i++){
         var ag = res[i];
-        rel += ag.id + "-" + ag.nomeCliente + "-" + ag.emailCliente + "-" + ag.celularCliente + "<br>";
+        rel += "<tr>" + "<td>"+ ag.agencia.nome + "</td>" + "<td>" +ag.nomeCliente + "</td>" + "<td>" + ag.emailCliente + "</td>" + "<td>" + ag.celularCliente + "</td>" + "<td>" + ag.dataAgendamento + "</td>" + "<td>" + ag.horaAgendamento + "</td>" + "<td>" + ag.observacao + "</td>";
 
     }
+    rel += "</table><br>";
     document.getElementById("relatorios").innerHTML = rel;
 
+}
+
+function logout(){
+    localStorage.removeItem("ScheduleUSER");
+    window.location = "index.html";
 }

@@ -6,11 +6,16 @@ function autenticar(){
     console.log("Digitou = "+txtEmail+" / "+txtSenha);
 
     // definir alguns passos
-
+    var func=0;
+    if(Number.isInteger(txtEmail)){
+        func = parseInt(txtEmail);
+    }
     // essa é a mensagem do corpo
     var msgBody = {
-        email : txtEmail,
-        senha : txtSenha
+        email     : txtEmail,
+        racf      : txtEmail,
+        funcional : func,
+        senha     : txtSenha
     }
     console.log(msgBody)
     // preciso, agora, definir o formato da mensagem de cabeçalho
