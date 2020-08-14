@@ -5,7 +5,7 @@
    2 - se não existir esse item? retorna para o index (sinal que não tem usuário conectado)
 */
 
-var templateFoto = `<img src="{{LINKFOTO}}" width="100%">`;
+var templateFoto = `<img src="{{LINKFOTO}}" width="50%">`;
 var templateInfo = `Nome: {{NOME}} <br>
                     Email: {{EMAIL}} <br>
                     RACF: {{RACF}} <br>

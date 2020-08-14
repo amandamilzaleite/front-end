@@ -77,7 +77,7 @@ function enviarDados(){
         celularCliente : txtCelular,
         dataAgendamento : txtNovaData,
         horaAgendamento : txtHora,
-        observacoes : txtObs,
+        observacao : txtObs,
         agencia :{
              id: txtAG
         }
